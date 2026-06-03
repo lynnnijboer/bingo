@@ -2,5 +2,3 @@
   command = "composer install --no-dev --optimize-autoloader && npm run build"
   publish = "public/build"
 
-[build.environment]
-  PHP_VERSION = "8.4.1"
