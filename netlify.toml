@@ -3,4 +3,4 @@
   publish = "public/build"
 
 [build.environment]
-  PHP_VERSION = "8.4"
+  PHP_VERSION = "8.4.1"
