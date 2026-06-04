@@ -470,7 +470,6 @@ onUnmounted(() => {
         <section v-show="currentScreen === 'home'" class="b-screen">
             <div class="b-home">
                 <div class="b-hero">
-                    <span class="b-kicker">Düsseldorf · Altstadt</span>
                     <h1 class="b-title">Kroegentocht<br />Bingo</h1>
                     <p class="b-subtitle">Verzamel punten. Maak foto's. Pak je bingo.</p>
 
@@ -531,7 +530,6 @@ onUnmounted(() => {
                     </div>
                     <div class="b-brandrow">
                         <div class="b-brand">
-                            <span class="b-kicker">Düsseldorf · Altstadt</span>
                             <h1 class="b-title">Kroegentocht Bingo</h1>
                             <p class="b-subtitle">Verzamel punten. Maak foto's. Pak je bingo.</p>
                         </div>
@@ -544,10 +542,6 @@ onUnmounted(() => {
                             <div class="b-scol b-accent"><div class="b-num">{{ totalPts }}</div><div class="b-lbl">Punten</div></div>
                             <div class="b-scol"><div class="b-num">{{ completedCount }}<em>/25</em></div><div class="b-lbl">Voltooid</div></div>
                             <div class="b-scol"><div class="b-num">{{ bingoCount }}</div><div class="b-lbl">Bingo's</div></div>
-                        </div>
-                        <div class="b-progress">
-                            <div class="b-pmeta"><span>{{ completedCount }} van 25 opdrachten</span><span>{{ totalPts }} / {{ maxPts }} pt</span></div>
-                            <div class="b-bar"><i :style="{ width: progressPct }"></i></div>
                         </div>
                     </div>
                 </header>
@@ -1118,7 +1112,7 @@ onUnmounted(() => {
     margin-top: 18px;
     background: var(--b-surface);
     border-radius: 20px;
-    padding: 4px 4px 16px;
+    padding: 4px;
 }
 
 .bingo-root .b-scorerow { display: flex; }
