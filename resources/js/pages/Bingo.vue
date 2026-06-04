@@ -393,7 +393,7 @@ function setupPWA() {
     const i192 = makeIcon(192); const i512 = makeIcon(512)
     const al = document.createElement('link'); al.rel = 'apple-touch-icon'; al.href = i192; document.head.appendChild(al)
     const fav = document.createElement('link'); fav.rel = 'icon'; fav.href = makeIcon(64); document.head.appendChild(fav)
-    const manifest = { name: 'Kroegentocht Bingo — Düsseldorf', short_name: 'Bingo', start_url: '.', display: 'standalone', orientation: 'portrait', background_color: '#000000', theme_color: '#000000', icons: [{ src: i192, sizes: '192x192', type: 'image/png', purpose: 'any maskable' }, { src: i512, sizes: '512x512', type: 'image/png', purpose: 'any maskable' }] }
+    const manifest = { name: 'Teamweekend Düsseldorf', short_name: 'Teamweekend', start_url: '.', display: 'standalone', orientation: 'portrait', background_color: '#000000', theme_color: '#000000', icons: [{ src: i192, sizes: '192x192', type: 'image/png', purpose: 'any maskable' }, { src: i512, sizes: '512x512', type: 'image/png', purpose: 'any maskable' }] }
     const blob = new Blob([JSON.stringify(manifest)], { type: 'application/manifest+json' })
     const ml = document.createElement('link'); ml.rel = 'manifest'; ml.href = URL.createObjectURL(blob); document.head.appendChild(ml)
 }
@@ -455,7 +455,7 @@ onUnmounted(() => {
 
 <template>
     <div class="bingo-root">
-        <Head title="Kroegentocht Bingo — Düsseldorf">
+        <Head title="Teamweekend Düsseldorf">
             <meta name="theme-color" content="#000000" />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="mobile-web-app-capable" content="yes" />
@@ -470,7 +470,7 @@ onUnmounted(() => {
         <section v-show="currentScreen === 'home'" class="b-screen">
             <div class="b-home">
                 <div class="b-hero">
-                    <h1 class="b-title">Kroegentocht<br />Bingo</h1>
+                    <h1 class="b-title">Teamweekend<br />Düsseldorf</h1>
                     <p class="b-subtitle">Verzamel punten. Maak foto's. Pak je bingo.</p>
 
                     <div class="b-field">
@@ -530,7 +530,7 @@ onUnmounted(() => {
                     </div>
                     <div class="b-brandrow">
                         <div class="b-brand">
-                            <h1 class="b-title">Kroegentocht Bingo</h1>
+                            <h1 class="b-title">Teamweekend Düsseldorf</h1>
                             <p class="b-subtitle">Verzamel punten. Maak foto's. Pak je bingo.</p>
                         </div>
                         <button class="b-menu-btn" aria-label="Menu" @click="menuOpen = true">
@@ -577,7 +577,6 @@ onUnmounted(() => {
                 <div class="b-navrow">
                     <span class="b-teamchip"><i class="b-dotg"></i><span>{{ teamName }}</span></span>
                 </div>
-                <span class="b-kicker">Düsseldorf · Altstadt</span>
                 <h1 class="b-lbtitle">Ranglijst</h1>
                 <p class="b-lbsub">Jouw team telt automatisch mee. Voeg andere teams toe en houd hun punten bij.</p>
 
@@ -615,7 +614,6 @@ onUnmounted(() => {
         <!-- ==================== PLANNING ==================== -->
         <section v-show="currentScreen === 'planning'" class="b-screen">
             <div class="b-plan">
-                <span class="b-kicker">Teamweekend · Avanti Wilskracht Vrouwen 1</span>
                 <h1 class="b-lbtitle">Planning</h1>
                 <p class="b-lbsub">Het volledige weekendprogramma in Düsseldorf.</p>
 
